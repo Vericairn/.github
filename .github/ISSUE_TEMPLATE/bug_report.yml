@@ -1,0 +1,67 @@
+name: Bug report
+description: Something in a Vericairn release does not work as its documentation says.
+type: Bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a problem. Search the open and closed issues first, and check the known limitations in the documentation set of the release you run.
+
+        Never report a security vulnerability here: follow the [security policy](https://github.com/Vericairn/.github/blob/main/SECURITY.md) instead. Leave out secrets, keys, tokens and anything from your estate you would not publish.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you saw, with the exact message or refusal.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+      description: What you expected to happen instead, and where the documentation says so, if it does.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Each command or action in order, from a fresh estate where you can.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Output of `vericairn version`
+      description: It prints the release and the commit it was built from. With Workbench, run the `vericairn` in the same `bin` directory as Workbench.
+      placeholder: <version>+<commit>
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - linux-x64
+        - linux-arm64
+        - osx-arm64
+        - osx-x64
+        - win-x64
+        - win-arm64
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Workbench or the command line
+      description: Where you saw the problem. The daemon and the MCP server run through the command line.
+      options:
+        - Workbench
+        - The command line
+        - Both
+    validations:
+      required: true

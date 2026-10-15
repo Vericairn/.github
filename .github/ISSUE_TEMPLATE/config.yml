@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security policy
+    url: https://github.com/Vericairn/.github/blob/main/SECURITY.md
+    about: Report a vulnerability privately, never in an issue. The policy says how.
+  - name: Release documentation
+    url: https://github.com/Vericairn/vericairn/blob/main/docs/releases/README.md
+    about: Each release's installation guide, operator's guide, references and known limitations.

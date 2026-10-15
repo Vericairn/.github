@@ -1,0 +1,29 @@
+name: Feature request
+description: Ask for an outcome Vericairn does not give you today.
+type: Feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for the suggestion. Search the open and closed issues first. Requests are welcome; opening one does not commit Vericairn to building it.
+  - type: textarea
+    id: outcome
+    attributes:
+      label: The outcome you want
+      description: What should be true, or possible, once this exists?
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Your use case
+      description: The situation you need it in, what you are working on, and where Vericairn falls short today.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+      description: Other ways you tried or thought of, including workarounds with the current release.
+    validations:
+      required: false
