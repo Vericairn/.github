@@ -76,4 +76,8 @@ pull requests are not accepted yet (see [contributing](https://github.com/Verica
 
 vericairn@jasonfurr.com
 
-<!-- Sponsor line: added here, with FUNDING.yml, once the operator's GitHub Sponsors profile is live. -->
+## Sponsor
+
+Vericairn is built by one person working with coding agents. If it is useful to you, you can
+[sponsor Jason Furr on GitHub](https://github.com/sponsors/Jayson-Furr). Sponsorship supports the work and the AI usage
+it takes; it includes no support, priority, features or license.
