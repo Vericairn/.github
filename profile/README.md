@@ -82,8 +82,8 @@ Community retains goals and independent evaluations, roster routing and asks, pr
 launchers and local-network pairing. It dispatches one goal step at a time; multi-step planning and scheduling
 remain planned Pro work. Alongside stand-in tests, five live runs qualified the Codex worker path carried by
 0.7.2 for the tested configuration. The fifth ran at `max` effort, recorded usage and a signed attempt and result
-through MCP, and made the permitted file change. It could not commit from its linked worktree; the builder
-must commit those changes. This does not qualify other harness or platform combinations. Native runs require
+through MCP, and made the permitted file change. It could not commit from its linked worktree. The changes
+stayed uncommitted for a person to review and commit. This does not qualify other harness or platform combinations. Native runs require
 machine-local configuration and an admitted exact harness version; generic dispatch
 is refused. Saved paired connections are used through the SDK, with no paired-runtime chooser in Workbench.
 
