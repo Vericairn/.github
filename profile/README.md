@@ -15,11 +15,16 @@ Vericairn is built, released and maintained in its own estate, by one person wor
 
 - **Community** is the free foundation, under the Apache License 2.0, commercial use included. Everything released
   so far is Community.
-- **Standard** is reserved for an optional offering on the same core. What it adds is not yet chosen, and nothing
-  is sold under it.
-- **Pro** is planned for coordination programs that operate goals across work orders. Its repository is public
-  for review under the PolyForm Noncommercial License 1.0.0, and it never becomes open source.
-  Commercial use needs a license, and none is offered yet. Nothing has been released from it.
+- **Standard** is planned to license the coordinated production features for one person, on the same core.
+  Nothing is offered or sold under it yet.
+- **Pro** is planned to license those features for teams and organizations, with coordination programs that
+  operate goals across work orders. Its repository is public for review under the PolyForm Noncommercial
+  License 1.0.0, and it never becomes open source. Commercial use needs a license, and none is offered yet.
+  Nothing has been released from it.
+- Every paid service is planned as software you can run yourself at the edition that sells it, and no access
+  to an estate will require a Vericairn account; the
+  [roadmap](https://github.com/Vericairn/vericairn/blob/main/ROADMAP.md#editions--planned-direction) lists the
+  five no-lock-in rules.
 
 ## Repositories
 
@@ -35,37 +40,39 @@ Vericairn is built, released and maintained in its own estate, by one person wor
 Vericairn is published on [GitHub Releases](https://github.com/Vericairn/vericairn/releases) as unsigned developer
 builds. Nothing is code-signed or notarized yet, so verify every download against its checksum.
 
-- The current published release is [0.8.0](https://github.com/Vericairn/vericairn/releases/tag/v0.8.0), published
-  on October 20, 2026: self-contained archives of the command line and of Workbench for Linux, macOS and Windows,
+- The current published release is [0.8.2](https://github.com/Vericairn/vericairn/releases/tag/v0.8.2), published
+  on October 22, 2026: self-contained archives of the command line and of Workbench for Linux, macOS and Windows,
   on x64 and arm64, with `SHA256SUMS`, a software bill of materials, the third-party notices and its
   documentation set.
-- Its [install guide](https://github.com/Vericairn/vericairn/blob/v0.8.0/docs/releases/0.8.0/install.md) covers
+- Its [install guide](https://github.com/Vericairn/vericairn/blob/v0.8.2/docs/releases/0.8.2/install.md) covers
   Linux, macOS and Windows, checking a download, Workbench, the MCP server, NuGet installation and upgrading an
   estate.
 - The [documentation sets](https://github.com/Vericairn/vericairn/blob/main/docs/releases/README.md) of the
   releases from 0.2.0 on are kept in the repository.
 
-0.8.0 follows 0.7.3. Estates can declare policies and recurring maintenance duties, which the release gate
-also checks, and adopt them explicitly after upgrading to record format 3, which 0.7.3 refuses;
-readable views make records easier to inspect; client operations can be cancelled or given deadlines; the
-command line shows what waits on the operator with the exact command to run; and authorized work moves
-through checked pull requests and merges. The
-[documentation set](https://github.com/Vericairn/vericairn/blob/v0.8.0/docs/releases/0.8.0/README.md) gives
-the published behavior and limits. 0.7.2's notes open with
-[Security](https://github.com/Vericairn/vericairn/blob/v0.7.2/docs/releases/0.7.2/release-notes.md#security),
-which describes the export-restore defect in releases 0.1.0 through 0.7.1 and its correction in 0.7.2. The
-earlier 0.7.0 candidate was withdrawn before publication.
+0.8.2 follows 0.8.0 and carries the work of the 0.8.1 candidate, which was withdrawn before publication, with
+a correction that lets the macOS and Linux command lines start other programs. Its notes open with
+[Security](https://github.com/Vericairn/vericairn/blob/v0.8.2/docs/releases/0.8.2/release-notes.md#security),
+which describes the corrections from 0.8.0's security review. Commands record exact document revisions and
+observe NuGet publication, a retained release basis stays small however large the estate grows, and
+Vericairn's MCP server is listed in the official MCP Registry. One known issue: each platform's archive
+carries a separately compiled build of the same libraries, so a policy basis differs by platform
+([issue 184](https://github.com/Vericairn/vericairn/issues/184)); 0.8.3 fixes it. 0.8.0, before it, added
+estate policies and recurring duties, readable views, cancellable client operations and checked pull requests
+and merges. The
+[documentation set](https://github.com/Vericairn/vericairn/blob/v0.8.2/docs/releases/0.8.2/README.md) gives
+the published behavior and limits. The earlier 0.7.0 candidate was also withdrawn before publication.
 
-All eight packages are available at 0.8.0 on nuget.org: `dotnet-vc`, `Vericairn`, `Vericairn.Daemon`,
+All eight packages are available at 0.8.2 on nuget.org: `dotnet-vc`, `Vericairn`, `Vericairn.Daemon`,
 `Vericairn.Mcp`, `Vericairn.Protocol`, `Vericairn.Records`, `Vericairn.Runtime` and `Vericairn.Sdk`.
 With the .NET 10 SDK:
 
 ```sh
-dotnet tool install --global dotnet-vc --version 0.8.0
+dotnet tool install --global dotnet-vc --version 0.8.2
 dotnet vc version
 ```
 
-In a .NET 10 project, `dotnet add package Vericairn --version 0.8.0` adds the SDK front door and its client,
+In a .NET 10 project, `dotnet add package Vericairn --version 0.8.2` adds the SDK front door and its client,
 protocol and record dependencies. The NuGet tool is framework-dependent and includes neither Workbench nor
 the macOS Secure Enclave helper; use the archives for those components.
 
@@ -90,13 +97,13 @@ remain planned Pro work. Alongside stand-in tests, seven live runs qualified the
 0.7.3 for the tested configuration. The fifth ran at `max` effort, recorded usage and a signed attempt and result
 through MCP, and made the permitted file change. The seventh, on macOS, committed the permitted change in its own workspace
 repository, and its branch was audited and fetched into the registered clone for review. This does not qualify
-other harness or platform combinations, and 0.8.0's worker changes are covered by tests only. Native runs require
+other harness or platform combinations, and the worker changes of 0.8.2 are covered by tests only. Native runs require
 machine-local configuration and an admitted exact harness version; generic dispatch
 is refused. Saved paired connections are used through the SDK, with no paired-runtime chooser in Workbench.
 
 Remote, the mobile companion, is not implemented or released.
 
-In 0.8.0 the command line is qualified on linux-x64, osx-arm64 and win-x64, where the release's tests ran; its
+In 0.8.2 the command line is qualified on linux-x64, osx-arm64 and win-x64, where the release's tests ran; its
 linux-arm64, osx-x64 and win-arm64 builds are provided but have not been run. Workbench is not qualified on any
 platform. The release's documentation set lists its known limitations.
 
