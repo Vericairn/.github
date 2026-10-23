@@ -11,6 +11,11 @@ releases are accepted by a person, from the recorded evidence.
 
 Vericairn is built, released and maintained in its own estate, by one person working with coding agents.
 
+Vericairn's official destinations are [vericairn.com](https://vericairn.com),
+[vericairn.org](https://vericairn.org), this [GitHub organization](https://github.com/Vericairn) and the
+[dotnet-vc](https://www.nuget.org/packages/dotnet-vc) and [Vericairn](https://www.nuget.org/packages/Vericairn)
+packages on nuget.org. Other sites using the name are not Vericairn's.
+
 ## Editions
 
 - **Community** is the free foundation, under the Apache License 2.0, commercial use included. Everything released
