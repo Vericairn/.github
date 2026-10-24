@@ -45,39 +45,40 @@ packages on nuget.org. Other sites using the name are not Vericairn's.
 Vericairn is published on [GitHub Releases](https://github.com/Vericairn/vericairn/releases) as unsigned developer
 builds. Nothing is code-signed or notarized yet, so verify every download against its checksum.
 
-- The current published release is [0.8.2](https://github.com/Vericairn/vericairn/releases/tag/v0.8.2), published
-  on October 22, 2026: self-contained archives of the command line and of Workbench for Linux, macOS and Windows,
+- The current published release is [0.8.3](https://github.com/Vericairn/vericairn/releases/tag/v0.8.3), published
+  on October 24, 2026: self-contained archives of the command line and of Workbench for Linux, macOS and Windows,
   on x64 and arm64, with `SHA256SUMS`, a software bill of materials, the third-party notices and its
   documentation set.
-- Its [install guide](https://github.com/Vericairn/vericairn/blob/v0.8.2/docs/releases/0.8.2/install.md) covers
+- Its [install guide](https://github.com/Vericairn/vericairn/blob/v0.8.3/docs/releases/0.8.3/install.md) covers
   Linux, macOS and Windows, checking a download, Workbench, the MCP server, NuGet installation and upgrading an
   estate.
 - The [documentation sets](https://github.com/Vericairn/vericairn/blob/main/docs/releases/README.md) of the
   releases from 0.2.0 on are kept in the repository.
 
-0.8.2 follows 0.8.0 and carries the work of the 0.8.1 candidate, which was withdrawn before publication, with
-a correction that lets the macOS and Linux command lines start other programs. Its notes open with
-[Security](https://github.com/Vericairn/vericairn/blob/v0.8.2/docs/releases/0.8.2/release-notes.md#security),
-which describes the corrections from 0.8.0's security review. Commands record exact document revisions and
-observe NuGet publication, a retained release basis stays small however large the estate grows, and
-Vericairn's MCP server is listed in the official MCP Registry. One known issue: each platform's archive
-carries a separately compiled build of the same libraries, so a policy basis differs by platform
-([issue 184](https://github.com/Vericairn/vericairn/issues/184)); 0.8.3 fixes it. 0.8.0, before it, added
-estate policies and recurring duties, readable views, cancellable client operations and checked pull requests
-and merges. The
-[documentation set](https://github.com/Vericairn/vericairn/blob/v0.8.2/docs/releases/0.8.2/README.md) gives
-the published behavior and limits. The earlier 0.7.0 candidate was also withdrawn before publication.
+0.8.3 follows 0.8.2. A first estate needs no hand-written JSON: `estate init` pins the build you run and
+`work new` records a work order from options. Any estate can pin and upgrade to the published Vericairn
+release it depends on, verified against the release's tag and checksums, online or from downloaded files.
+A release can be checked against the whole gate before it is submitted, a candidate withdrawn and a plan
+moved with single commands, and every platform's archive carries the same library builds, which fixes
+0.8.2's known issue ([issue 184](https://github.com/Vericairn/vericairn/issues/184)). Its notes open with
+[Security](https://github.com/Vericairn/vericairn/blob/v0.8.3/docs/releases/0.8.3/release-notes.md#security),
+which describes a correction to how a checked push runs git. 0.8.2, before it, carried the work of the
+withdrawn 0.8.1 candidate with the corrections from 0.8.0's security review, and 0.8.0 added estate policies
+and recurring duties, readable views, cancellable client operations and checked pull requests and merges.
+The [documentation set](https://github.com/Vericairn/vericairn/blob/v0.8.3/docs/releases/0.8.3/README.md)
+gives the published behavior and limits. The earlier 0.7.0 and 0.8.1 candidates were withdrawn before
+publication.
 
-All eight packages are available at 0.8.2 on nuget.org: `dotnet-vc`, `Vericairn`, `Vericairn.Daemon`,
+All eight packages are available at 0.8.3 on nuget.org: `dotnet-vc`, `Vericairn`, `Vericairn.Daemon`,
 `Vericairn.Mcp`, `Vericairn.Protocol`, `Vericairn.Records`, `Vericairn.Runtime` and `Vericairn.Sdk`.
 With the .NET 10 SDK:
 
 ```sh
-dotnet tool install --global dotnet-vc --version 0.8.2
+dotnet tool install --global dotnet-vc --version 0.8.3
 dotnet vc version
 ```
 
-In a .NET 10 project, `dotnet add package Vericairn --version 0.8.2` adds the SDK front door and its client,
+In a .NET 10 project, `dotnet add package Vericairn --version 0.8.3` adds the SDK front door and its client,
 protocol and record dependencies. The NuGet tool is framework-dependent and includes neither Workbench nor
 the macOS Secure Enclave helper; use the archives for those components.
 
@@ -102,13 +103,13 @@ remain planned Pro work. Alongside stand-in tests, seven live runs qualified the
 0.7.3 for the tested configuration. The fifth ran at `max` effort, recorded usage and a signed attempt and result
 through MCP, and made the permitted file change. The seventh, on macOS, committed the permitted change in its own workspace
 repository, and its branch was audited and fetched into the registered clone for review. This does not qualify
-other harness or platform combinations, and the worker changes of 0.8.2 are covered by tests only. Native runs require
+other harness or platform combinations; 0.8.3 changes no worker behavior, and the estate's 0.8.3 runs used 0.8.2's worker on macOS. Native runs require
 machine-local configuration and an admitted exact harness version; generic dispatch
 is refused. Saved paired connections are used through the SDK, with no paired-runtime chooser in Workbench.
 
 Remote, the mobile companion, is not implemented or released.
 
-In 0.8.2 the command line is qualified on linux-x64, osx-arm64 and win-x64, where the release's tests ran; its
+In 0.8.3 the command line is qualified on linux-x64, osx-arm64 and win-x64, where the release's tests ran; its
 linux-arm64, osx-x64 and win-arm64 builds are provided but have not been run. Workbench is not qualified on any
 platform. The release's documentation set lists its known limitations.
 
