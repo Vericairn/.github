@@ -45,40 +45,42 @@ packages on nuget.org. Other sites using the name are not Vericairn's.
 Vericairn is published on [GitHub Releases](https://github.com/Vericairn/vericairn/releases) as unsigned developer
 builds. Nothing is code-signed or notarized yet, so verify every download against its checksum.
 
-- The current published release is [0.8.3](https://github.com/Vericairn/vericairn/releases/tag/v0.8.3), published
-  on October 24, 2026: self-contained archives of the command line and of Workbench for Linux, macOS and Windows,
+- The current published release is [0.8.4](https://github.com/Vericairn/vericairn/releases/tag/v0.8.4), published
+  on October 28, 2026: self-contained archives of the command line and of Workbench for Linux, macOS and Windows,
   on x64 and arm64, with `SHA256SUMS`, a software bill of materials, the third-party notices and its
   documentation set.
-- Its [install guide](https://github.com/Vericairn/vericairn/blob/v0.8.3/docs/releases/0.8.3/install.md) covers
+- Its [install guide](https://github.com/Vericairn/vericairn/blob/v0.8.4/docs/releases/0.8.4/install.md) covers
   Linux, macOS and Windows, checking a download, Workbench, the MCP server, NuGet installation and upgrading an
   estate.
 - The [documentation sets](https://github.com/Vericairn/vericairn/blob/main/docs/releases/README.md) of the
   releases from 0.2.0 on are kept in the repository.
 
-0.8.3 follows 0.8.2. A first estate needs no hand-written JSON: `estate init` pins the build you run and
-`work new` records a work order from options. Any estate can pin and upgrade to the published Vericairn
-release it depends on, verified against the release's tag and checksums, online or from downloaded files.
-A release can be checked against the whole gate before it is submitted, a candidate withdrawn and a plan
-moved with single commands, and every platform's archive carries the same library builds, which fixes
-0.8.2's known issue ([issue 184](https://github.com/Vericairn/vericairn/issues/184)). Its notes open with
-[Security](https://github.com/Vericairn/vericairn/blob/v0.8.3/docs/releases/0.8.3/release-notes.md#security),
-which describes a correction to how a checked push runs git. 0.8.2, before it, carried the work of the
-withdrawn 0.8.1 candidate with the corrections from 0.8.0's security review, and 0.8.0 added estate policies
-and recurring duties, readable views, cancellable client operations and checked pull requests and merges.
-The [documentation set](https://github.com/Vericairn/vericairn/blob/v0.8.3/docs/releases/0.8.3/README.md)
+0.8.4 follows 0.8.3. Reusable templates give an estate's documents, roadmaps, communication, context, commits
+and reviews consistent sections and checks. Saved prompts can be shared across an estate, kept as favorites and used
+with agent runs, assignments and answers to an agent's questions, from the command line or as MCP prompts. The
+operator closes finished work in one signed action and keeps every request made of them until it is done or
+dismissed, and release review briefs, decisions from answered questions and the documentation pass after each
+publication come from the records. `status` stays within its deadline on a large estate, which fixes 0.8.3's known
+issue ([issue 205](https://github.com/Vericairn/vericairn/issues/205)). Its notes open with
+[Security](https://github.com/Vericairn/vericairn/blob/v0.8.4/docs/releases/0.8.4/release-notes.md#security),
+which describes how a checked push now reads only a clone's real objects. 0.8.3, before it, gave every estate a
+verified pin of the published release it depends on and corrected how a checked push runs git, and 0.8.0 added
+estate policies and recurring duties, readable views, cancellable client operations and checked pull requests and
+merges.
+The [documentation set](https://github.com/Vericairn/vericairn/blob/v0.8.4/docs/releases/0.8.4/README.md)
 gives the published behavior and limits. The earlier 0.7.0 and 0.8.1 candidates were withdrawn before
 publication.
 
-All eight packages are available at 0.8.3 on nuget.org: `dotnet-vc`, `Vericairn`, `Vericairn.Daemon`,
+All eight packages are available at 0.8.4 on nuget.org: `dotnet-vc`, `Vericairn`, `Vericairn.Daemon`,
 `Vericairn.Mcp`, `Vericairn.Protocol`, `Vericairn.Records`, `Vericairn.Runtime` and `Vericairn.Sdk`.
 With the .NET 10 SDK:
 
 ```sh
-dotnet tool install --global dotnet-vc --version 0.8.3
+dotnet tool install --global dotnet-vc --version 0.8.4
 dotnet vc version
 ```
 
-In a .NET 10 project, `dotnet add package Vericairn --version 0.8.3` adds the SDK front door and its client,
+In a .NET 10 project, `dotnet add package Vericairn --version 0.8.4` adds the SDK front door and its client,
 protocol and record dependencies. The NuGet tool is framework-dependent and includes neither Workbench nor
 the macOS Secure Enclave helper; use the archives for those components.
 
@@ -103,13 +105,13 @@ remain planned Pro work. Alongside stand-in tests, seven live runs qualified the
 0.7.3 for the tested configuration. The fifth ran at `max` effort, recorded usage and a signed attempt and result
 through MCP, and made the permitted file change. The seventh, on macOS, committed the permitted change in its own workspace
 repository, and its branch was audited and fetched into the registered clone for review. This does not qualify
-other harness or platform combinations; 0.8.3 changes no worker behavior, and the estate's 0.8.3 runs used 0.8.2's worker on macOS. Native runs require
+other harness or platform combinations; 0.8.4 changes no worker run behavior, and the estate's 0.8.4 runs used 0.8.3's worker on macOS. Native runs require
 machine-local configuration and an admitted exact harness version; generic dispatch
 is refused. Saved paired connections are used through the SDK, with no paired-runtime chooser in Workbench.
 
 Remote, the mobile companion, is not implemented or released.
 
-In 0.8.3 the command line is qualified on linux-x64, osx-arm64 and win-x64, where the release's tests ran; its
+In 0.8.4 the command line is qualified on linux-x64, osx-arm64 and win-x64, where the release's tests ran; its
 linux-arm64, osx-x64 and win-arm64 builds are provided but have not been run. Workbench is not qualified on any
 platform. The release's documentation set lists its known limitations.
 
