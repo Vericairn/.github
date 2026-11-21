@@ -22,8 +22,9 @@ Keep each issue to one problem or one request.
 
 ## Outside pull requests are not accepted yet
 
-The terms on which Vericairn accepts outside contributions are decided at milestone M4. Until then, pull requests
-from outside are not accepted. Open an issue instead, and describe the problem or the change you have in mind.
+The terms on which Vericairn accepts outside contributions are decided with the legal terms of a later milestone.
+Until then, pull requests from outside are not accepted. Open an issue instead, and describe the problem or the
+change you have in mind.
 
 Vericairn Pro, whose source is published for review, takes no outside contributions at all, and neither will
 Vericairn's first-party extensions.
