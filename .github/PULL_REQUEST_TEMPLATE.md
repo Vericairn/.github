@@ -1,7 +1,8 @@
 <!--
-Outside pull requests are not accepted yet: the terms for contributions are decided at milestone M4. Vericairn Pro
-takes no outside contributions at all, and neither will the first-party extensions. If you are not a maintainer,
-please open an issue instead. See https://github.com/Vericairn/.github/blob/main/CONTRIBUTING.md
+Outside pull requests are not accepted yet: the terms for contributions are decided with the legal terms of a
+later milestone. Vericairn Pro takes no outside contributions at all, and neither will the first-party extensions.
+If you are not a maintainer, please open an issue instead.
+See https://github.com/Vericairn/.github/blob/main/CONTRIBUTING.md
 -->
 
 ## What changes
